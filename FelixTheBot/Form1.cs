@@ -13,6 +13,7 @@ namespace FelixTheBot
     public partial class Form1 : Form
     {
         BackgroundWorker bw;
+        Telegram.Bot.TelegramBotClient Bot;
 
         public Form1()
         {
@@ -28,9 +29,13 @@ namespace FelixTheBot
             var worker = sender as BackgroundWorker;
             var key = e.Argument as String; // get bot token
 
+            System.Net.WebProxy wp = new System.Net.WebProxy("54.37.65.79:3128", true);
+            wp.Credentials = new System.Net.NetworkCredential("user1", "user1Password");
+            Bot = new Telegram.Bot.TelegramBotClient(key, wp); // initialize API
+
             try
             {
-                var Bot = new Telegram.Bot.TelegramBotClient(key); // initialize API
+                Bot = new Telegram.Bot.TelegramBotClient(key); // initialize API
 
                 try
                 {
