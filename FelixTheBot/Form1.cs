@@ -12,16 +12,16 @@ namespace FelixTheBot
 {
     public partial class Form1 : Form
     {
-        BackgroundWorker bw;
+        BackgroundWorker BackGroundWorker;
         Telegram.Bot.TelegramBotClient Bot;
 
         public Form1()
         {
             InitializeComponent();
 
-
-            this.bw = new BackgroundWorker();
-            this.bw.DoWork += this.bw_DoWork;
+            
+            this.BackGroundWorker = new BackgroundWorker();
+            this.BackGroundWorker.DoWork += this.bw_DoWork;
         }
 
         async void bw_DoWork(object sender, DoWorkEventArgs e)
@@ -74,9 +74,9 @@ namespace FelixTheBot
         void buttonStart_Click(object sender, EventArgs e)
         {
             var text = textBox1.Text;
-            if (text != "" && this.bw.IsBusy != true)
+            if (text != "" && this.BackGroundWorker.IsBusy != true)
             {
-                this.bw.RunWorkerAsync(text);
+                this.BackGroundWorker.RunWorkerAsync(text);
                 buttonStart.Text = "Бот запущен...";
             }
         }
