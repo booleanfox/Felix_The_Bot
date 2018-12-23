@@ -10,7 +10,9 @@
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
-token.txt
+token*
+credentials*
+
 
 # Build results
 [Dd]ebug/

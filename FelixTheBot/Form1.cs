@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using AIMLbot;
+using MihaZupan;
 
 namespace FelixTheBot
 {
@@ -16,43 +17,73 @@ namespace FelixTheBot
     {
 
        
-        BackgroundWorker bw;
+       
         Telegram.Bot.TelegramBotClient Botik;
+        string token;
+        List<ProxyInfo> proxyInfos;
+        HttpToSocks5Proxy proxy;
+        AIMLbot.Bot brain;
 
         public Form1()
         {
             InitializeComponent();
+            var lines = File.ReadAllLines("credentials.txt");
 
+            token = lines[0];
+            foreach (string s in lines.Skip(1))
+            {
+                var t = s.Split(':');
+                if (t.Length >= 2 && int.TryParse(t[1], out int port)) {
+                    proxyInfos.Add(new ProxyInfo(t[0], port));
+                }
+            }
+            proxy = new HttpToSocks5Proxy(proxyInfos.ToArray());
+            proxy.ResolveHostnamesLocally = true;
+            if (!proxy.IsBypassed(new Uri("https://telegram.org/")))
+            {
+                throw new Exception("No proxies work!");
+
+            }
+
+            InitBrain();
+            InitBot();
+        }
+
+
+        void InitBrain()
+        {
+            brain = new Bot();
+            brain.loadSettings(Path.Combine(Environment.CurrentDirectory, Path.Combine("config", "Settings.xml")));
+            brain.loadAIMLFromFiles();
+            brain.isAcceptingUserInput = true;
             
-            this.BackGroundWorker = new BackgroundWorker();
-            this.BackGroundWorker.DoWork += this.bw_DoWork;
+        }
+
+        async void InitBot()
+        {
+            Botik = new Telegram.Bot.TelegramBotClient(token, proxy);
+            if(  ! await Botik.TestApiAsync())
+            {
+                throw new Exception("Can't reach Telegram");
+            }
+            Botik.OnMessage += Botik_OnMessage;
+            Botik.StartReceiving();
+        }
+
+        private void Botik_OnMessage(object sender, Telegram.Bot.Args.MessageEventArgs e)
+        {
+            
         }
 
         async void bw_DoWork(object sender, DoWorkEventArgs e)
         {
-            var worker = sender as BackgroundWorker;
-
-
-            var key = e.Argument as String; // get bot token
-
-            System.Net.WebProxy wp = new System.Net.WebProxy("54.39.144.247:9090", true);
-            wp.Credentials = new System.Net.NetworkCredential("user1", "user1Password");
-            Botik = new Telegram.Bot.TelegramBotClient(key, wp); // initialize API
 
             try
             {
-                Botik = new Telegram.Bot.TelegramBotClient(key); // initialize API
-
-                try
-                {
-                    await Botik.SetWebhookAsync("");
-                }
-                catch (Exception ex) { }
-
-                string settingsPath = Path.Combine(Environment.CurrentDirectory, Path.Combine("config", "Settings.xml"));
+                string settingsPath;
                 Bot botik_aiml = new Bot();
-                botik_aiml.loadSettings(settingsPath);
-                User myUser = new User("User", botik_aiml);
+               // botik_aiml.loadSettings(settingsPath);
+               // User myUser = new User();
                 botik_aiml.isAcceptingUserInput = false;
                 botik_aiml.loadAIMLFromFiles();
                 botik_aiml.isAcceptingUserInput = true;
@@ -73,10 +104,10 @@ namespace FelixTheBot
                                        replyToMessageId: message.MessageId);
                             }
 
-                            Request r = new Request(message.Text, myUser, botik_aiml);
-                            Result res = botik_aiml.Chat(r);
+                            //Request r = new Request(message.Text, myUser, botik_aiml);
+                            //Result res = botik_aiml.Chat(r);
 
-                            await Botik.SendTextMessageAsync(message.Chat.Id, res.Output);
+                            //await Botik.SendTextMessageAsync(message.Chat.Id, res.Output);
                         }
                         offset = update.Id + 1;
                     }
@@ -93,13 +124,11 @@ namespace FelixTheBot
         void buttonStart_Click(object sender, EventArgs e)
         {
 
-            //  var text = textBox1.Text;
-            //if (text != "" && this.bw.IsBusy != true)
-            System.IO.StreamReader sr = new System.IO.StreamReader(@"token_Felix.txt");
-            this.bw.RunWorkerAsync(sr.ReadLine());
-            buttonStart.Text = "Бот запущен...";
+        }
 
-
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            
         }
     }
 }
