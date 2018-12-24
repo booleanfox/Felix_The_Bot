@@ -148,7 +148,9 @@ namespace FelixTheBot
         private void Botik_OnMessage(object sender, Telegram.Bot.Args.MessageEventArgs e)
         {
             var message = e.Message;
-            if(message.Type == Telegram.Bot.Types.Enums.MessageType.Text && message.From.Id != Botik_identity.Id)
+            if(message.Type == Telegram.Bot.Types.Enums.MessageType.Text 
+                && message.From.Id != Botik_identity.Id
+                && message.Text.Contains("@Felix_the_Bot"))
             {
                 User user = GetUser(message.From.Id);
                 string text = message.Text;
@@ -156,7 +158,7 @@ namespace FelixTheBot
                 string reply = res.RawOutput.Trim();
                 if (reply == "")
                     return;
-                Botik.SendTextMessageAsync(message.Chat.Id, reply);
+                Botik.SendTextMessageAsync(message.Chat.Id, reply, replyToMessageId: message.MessageId);
                 
             }
 
