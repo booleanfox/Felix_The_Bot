@@ -95,8 +95,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy $(ProjectDir)aiml\*   $(ProjectDir)$(OutDir)aiml\  
-xcopy $(ProjectDir)config\*   $(ProjectDir)$(OutDir)config\  
-xcopy $(ProjectDir)credentials.txt  $(ProjectDir)$(OutDir)</PostBuildEvent>
+    <PostBuildEvent>xcopy $(ProjectDir)aiml\*   $(ProjectDir)$(OutDir)aiml\   /Y
+xcopy $(ProjectDir)config\*   $(ProjectDir)$(OutDir)config\   /Y
+xcopy $(ProjectDir)credentials.txt  $(ProjectDir)$(OutDir) /Y</PostBuildEvent>
   </PropertyGroup>
 </Project>
