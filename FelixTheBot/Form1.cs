@@ -220,6 +220,7 @@ namespace FelixTheBot
                 Botik.OnMessage -= Botik_OnMessage;
                 label1.ForeColor = Color.Red;
                 label1.Text = "Бот отключен";
+                buttonStart.Text = "Включить бота!";
             }
             else
             {
@@ -227,6 +228,7 @@ namespace FelixTheBot
                 Botik.OnMessage += Botik_OnMessage;
                 label1.ForeColor = Color.Green;
                 label1.Text = "Бот включен";
+                buttonStart.Text = "Выключить бота!";
             }
 
 
