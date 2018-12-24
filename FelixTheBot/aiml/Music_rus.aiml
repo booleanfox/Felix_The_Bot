@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<category><pattern>* ТЕМНИКОВА *</pattern>
+<template>Темникова крутая!</template>
+</category>
+<category><pattern>ТЫ ЛЮБИШЬ МУЗЫКУ</pattern>
+<template>Как можно не любить музыку?</template>
+</category>
+
+</aiml>
