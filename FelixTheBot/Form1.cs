@@ -25,19 +25,20 @@ namespace FelixTheBot
         Bot brain;
         Telegram.Bot.Types.User Botik_identity;
         int offset = 0;
+        bool is_silent = false;
 
         Dictionary<int,User> users= new Dictionary<int, User>();
 
        
 
-        private User GetUser(int id)
+        private User GetUser(Telegram.Bot.Types.User u)
         {
+            int id = u.Id;
             lock (UsersDBlock)
             {
                 if (!users.ContainsKey(id))
-                {
-                    users.Add(id, new User(id.ToString(), brain));
-
+                {                 
+                    users.Add(id, new AIMLbot.User(u.FirstName + " " + u.LastName, brain));
                 }
                 return users[id];
             }
@@ -148,18 +149,29 @@ namespace FelixTheBot
         private void Botik_OnMessage(object sender, Telegram.Bot.Args.MessageEventArgs e)
         {
             var message = e.Message;
-            if(message.Type == Telegram.Bot.Types.Enums.MessageType.Text 
-                && message.From.Id != Botik_identity.Id
-                && message.Text.Contains("@Felix_the_Bot"))
+            var command  = message.Text.Trim();
+            if (command == $"SILENCE @{Botik_identity.Username}" || command == "SILENCE_ALL")
+                is_silent = true;
+            else if (command == $"UNSILENCE @{Botik_identity.Username}" || command == "UNSILENCE_ALL")
+                is_silent = false;
+            else if (command == $"REPORT @{Botik_identity.Username}" || command == "REPORT_ALL")
             {
-                User user = GetUser(message.From.Id);
+                Botik.SendTextMessageAsync(message.Chat.Id,  $"Я {Botik_identity.Username}, ставьте лайк и подписывайтесь!", replyToMessageId: message.MessageId);
+            }
+            else if (!is_silent
+                && message.Type == Telegram.Bot.Types.Enums.MessageType.Text
+                && message.From.Id != Botik_identity.Id
+                && message.Text.Contains("@"+Botik_identity.Username))
+            {
+
+                User user = GetUser(message.From);
                 string text = message.Text;
                 var res = brain.Chat(text, user.UserID);
                 string reply = res.RawOutput.Trim();
                 if (reply == "")
                     return;
                 Botik.SendTextMessageAsync(message.Chat.Id, reply, replyToMessageId: message.MessageId);
-                
+
             }
 
         }
