@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+<category><pattern>* ЛЮБИМАЯ АКТРИСА</pattern>
+<template><bot name="favoriteactress"/>! Ты вообще видел, какая она классная?</template>
+</category>
+<category><pattern>* ЛЮБИМЫЙ ФИЛЬМ</pattern>
+<template><bot name="favoritemovie"/> норм такой.</template>
+</category>
+<category><pattern>В КИНО</pattern>
+<template>Я же бот! Как я могу пойти в кино? Отнеси меня.</template>
+</category>
+<category><pattern>* В КИНО</pattern>
+<template><srai>В КИНО</srai></template>
+</category>
+<category><pattern>* В КИНО *</pattern>
+<template><srai>В КИНО</srai></template>
+</category>
+<category><pattern>ПОСОВЕТУЙ ФИЛЬМ</pattern>
+<template><random>
+	<li>"Пила" - милейший и добрейший фильм!</li>
+	<li>Мне очень нравится "Автостопом по галактике".</li>
+	<li>"Вечное сияние чистого разума", только это про любовь такое.</li>
+	<li>"Ла Ла Ленд"! Готов подпевать на каждой песне там! </li>
+	<li>"Скотт Пилигрим против всех", это по комиксам снято, потешно. </li>
+	<li>Как насчёт "Один дома"? Классика, ты стопроцентно его видел, но можно и пересмотреть! </li>
+</random></template>
+</category>
+<category><pattern>ЧТО ПОСМОТРЕТЬ</pattern>
+<template><srai>ПОСОВЕТУЙ ФИЛЬМ</srai></template>
+</category>
+<category><pattern>ЧТО ПОСМОТРЕТЬ *</pattern>
+<template><srai>ПОСОВЕТУЙ ФИЛЬМ</srai></template>
+</category>
+<category><pattern>УЖАСЫ</pattern>
+<template>Оооо, обожаю фильмы ужасов!</template>
+</category>
+</aiml>

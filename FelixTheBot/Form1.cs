@@ -135,8 +135,8 @@ namespace FelixTheBot
             brain.isAcceptingUserInput = false;
             brain.loadAIMLFromFiles();
             brain.isAcceptingUserInput = true;
-       
-          
+            brain.TrustAIML = true;
+
         }
 
          void InitBot()
@@ -213,6 +213,7 @@ namespace FelixTheBot
             {
                 User user = GetUser(message.From);
                 string text = message.Text;
+                
                 var res = brain.Chat(text, user.UserID);
                 string reply = res.RawOutput.Trim();
                 if (reply == "")
