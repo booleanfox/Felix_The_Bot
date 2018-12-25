@@ -31,12 +31,29 @@ namespace FelixTheBot
         bool is_blaber = false;
         Dictionary<int,User> users= new Dictionary<int, User>();
         System.Timers.Timer timer1;
-        int timeout = 30000; // 10 seconds
-        
-        
+        int timeout = 120000; // 120 seconds
+
+        string cat_path = "C:\\Users\\je_day\\Desktop\\Felix_The_Bot\\FelixTheBot\\cat.png";
 
         public delegate void message(string text);
         public event message NewText;
+
+
+
+        string[] memes = new string[]
+        {
+            @"https://pp.userapi.com/c850324/v850324542/9f583/I5KPC2Q1roc.jpg",
+            @"https://pp.userapi.com/c850236/v850236198/99ad4/4RZ-Pi8ReL4.jpg",
+            @"https://pp.userapi.com/c846121/v846121936/15558a/8tbnqVF6xWE.jpg",
+            @"https://pp.userapi.com/c850428/v850428949/771d6/mSjJpoWL7uU.jpg",
+            @"https://pp.userapi.com/c844521/v844521644/15db57/YvHox2G16_k.jpg",
+            @"https://sun1-8.userapi.com/c543108/v543108125/44234/i-8cutJNLD8.jpg",
+            @"https://pp.userapi.com/c850324/v850324542/9f583/I5KPC2Q1roc.jpg",
+            @"https://sun1-3.userapi.com/c543108/v543108765/38b7e/RwLHnJbGBPA.jpg"
+        };
+
+
+        Random r = new Random();
 
         private void getEvent(string text)
         {
@@ -182,19 +199,19 @@ namespace FelixTheBot
             }
         }
 
-     
+        
 
         private void Botik_OnMessage(object sender, Telegram.Bot.Args.MessageEventArgs e)
         {
             timer1.Stop();
-            timer1.Start();
+           
            
             var message = e.Message;
             last_chat = message.Chat;
-            if (message.Type != Telegram.Bot.Types.Enums.MessageType.Text)
-                return;
+            
+       
             AddText($"{message.From.Username}: {message.Text} \n");
-            var command = message.Text.Trim();
+            var command = message.Text == null ? "" :message.Text.Trim();
             if (command == $"SILENCE @{Botik_identity.Username}" || command == "SILENCE_ALL")
             {
                 is_silent = true;
@@ -223,32 +240,105 @@ namespace FelixTheBot
                 Botik.SendTextMessageAsync(message.Chat.Id, reply, replyToMessageId: message.MessageId);
                 AddText(reply+"\n");
             }
-            else if (
-                        message.From.Id != Botik_identity.Id
-                        && 
-                        (
-                             message.Chat.Type == Telegram.Bot.Types.Enums.ChatType.Private ||
-                             is_blaber ||
-                             message.Text.Contains("@" + Botik_identity.Username)
-                        )
-                    )
+            else if ( message.From.Id != Botik_identity.Id)
             {
+
                 User user = GetUser(message.From);
-                Request request = new Request(message.Text, user, brain);
-                Result result = brain.Chat(request);
+                string toAIML = null;
+                bool Answer = message.Chat.Type == Telegram.Bot.Types.Enums.ChatType.Private ||
+                              is_blaber ||
+                             message.Text.Contains("@" + Botik_identity.Username) ||
+                             (message.ReplyToMessage != null && message.ReplyToMessage.From.Id == Botik_identity.Id);
+
+                switch (message.Type)
+                {
+            
+                    case Telegram.Bot.Types.Enums.MessageType.Text:
+                        toAIML = message.Text;
+                        break;
+                    case Telegram.Bot.Types.Enums.MessageType.Photo:
+                        toAIML = "GOT_PHOTO";
+                        break;
+                    case Telegram.Bot.Types.Enums.MessageType.Audio:
+                        toAIML = "GOT_AUDIO";
+                        break;
+                    case Telegram.Bot.Types.Enums.MessageType.Video:
+                        break;
+                    case Telegram.Bot.Types.Enums.MessageType.Voice:
+                        toAIML = "GOT_VOICE";
+                        break;
+                    case Telegram.Bot.Types.Enums.MessageType.Document:
+                        break;
+                    case Telegram.Bot.Types.Enums.MessageType.Sticker:
+                        toAIML = "GOT_STICKER";
+                        break;
+                    case Telegram.Bot.Types.Enums.MessageType.VideoNote:
+                        break;
+                    case Telegram.Bot.Types.Enums.MessageType.ChatMembersAdded:
+                        toAIML = "NEW_MEMBER " + string.Join(", ",message.NewChatMembers.Select(u => u.Username));
+                        Answer = true;  
+                        break;
+                    case Telegram.Bot.Types.Enums.MessageType.ChatMemberLeft:
+                        toAIML = "MEMBER_LEFT " + message.LeftChatMember.Username;
+                        Answer = true;
+                        break;
+                    case Telegram.Bot.Types.Enums.MessageType.MessagePinned:
+                        break;
+                    
+                    default:
+                        break;
+                }
+
+                if (toAIML != null && Answer)
+                {
+                    Request request = new Request(toAIML, user, brain);
+                    Result result = brain.Chat(request);            
+                    WorkResponce(result, message);
+
+                }
+
                
-
-                string reply = result.Output; ;
-
-                if (reply == null)
-                    throw new Exception("null output");                                
-                Botik.SendTextMessageAsync(message.Chat.Id, reply, replyToMessageId: message.MessageId);
-                AddText($"{Botik_identity.Username} to {message.From.Username}: {reply} \n");
+                
             }
+
+            timer1.Start();
 
         }
 
-     
+    
+        private void WorkResponce(Result aiml_res, Telegram.Bot.Types.Message message)
+        {
+            string responce = aiml_res.Output.Trim();
+            var chatid = message.Chat.Id;
+            var replyid = message.MessageId;
+
+            switch (responce)
+            {
+                case "SEND_CAT":
+                    using (var stream = File.Open(cat_path, FileMode.Open))
+                    {
+                        var rep = Botik.SendPhotoAsync(message.Chat.Id, stream, "", replyToMessageId: replyid).Result;
+                    }                  
+                    break;
+                case "SEND_MEME":
+                    if(memes.Length > 0 )
+                    {
+                        var ind = r.Next() % memes.Length;
+                        Botik.SendPhotoAsync(chatid, photo: memes[ind]);
+
+                    }
+                    break;
+                default:
+                    Botik.SendTextMessageAsync(chatid, responce, replyToMessageId: replyid);
+                    break;
+            }
+
+
+            AddText($"{Botik_identity.Username} to {message.From.Username}: {responce} \n");
+
+        }
+
+
         void buttonStart_Click(object sender, EventArgs e)
         {
             if (Botik.IsReceiving)
