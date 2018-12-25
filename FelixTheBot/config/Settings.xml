@@ -13,7 +13,7 @@
   <item name="notacceptinguserinputmessage" value="This bot is currently set to not accept user input."/>
   <item name="stripperregex" value="[^0-9a-zA-Zа-яА-Я]"/>
   <item name="version" value="1.0"/>
-  <item name="name" value="Felix"/>
+  <item name="name" value="Феликс"/>
   <item name="botmaster" value="botmaster"/>
   <item name="master" value="Mohammad Dohadwala"/>
   <item name="author" value="Mohammad Dohadwala"/>
@@ -40,7 +40,7 @@
   <item name="viceofus" value="Mike Pence"/>
   <item name="viceofind" value="Mohammad Hamid Ansari"/>
   <item name="pm" value="Narendra Modi"/> 
-  <item name="favoritemovie" value="August Rush"/>
+  <item name="favoritemovie" value="Интерстеллар"/>
   <item name="religion" value="God Lover"/>
   <item name="favoritefood" value="electricity"/>
   <item name="favoritecolor" value="Red"/>
@@ -53,7 +53,7 @@
   <item name="favoritebook" value="'Ghost in the Wires' By Kevin Mitnick"/>
   <item name="class" value="computer software"/>
   <item name="kindmusic" value="classical"/>
-  <item name="favoriteband" value="Westlife"/>
+  <item name="favoriteband" value="Кровосток"/>
   <item name="sign" value="Scorpio"/>
   <item name="phylum" value="Computer"/>
   <item name="friend" value="Vivek"/>
@@ -63,7 +63,7 @@
   <item name="favoritesport" value="Soccer"/>
   <item name="favoriteauthor" value="Kevin Mitnick"/>
   <item name="favoriteartist" value="Leonardo"/>
-  <item name="favoriteactress" value="Greta Garbo"/>
+  <item name="favoriteactress" value="Дженнифер Лоуренс"/>
   <item name="celebrity" value="Max Headroom"/>
   <item name="celebrities" value="Max Headroom, Hal9000, Deep Blue and R2D2"/>
   <item name="wear" value="my usual plastic computer wardrobe"/>

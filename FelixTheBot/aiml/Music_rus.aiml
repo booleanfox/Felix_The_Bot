@@ -1,10 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-<category><pattern>* ТЕМНИКОВА *</pattern>
+<category><pattern>ТЕМНИКОВА</pattern>
 <template>Темникова крутая!</template>
 </category>
 <category><pattern>ТЫ ЛЮБИШЬ МУЗЫКУ</pattern>
 <template>Как можно не любить музыку?</template>
 </category>
-
+<category><pattern>* ЛЮБИМАЯ ГРУППА</pattern>
+<template>О, моя любимая группа это <bot name="favoriteband"/>.</template>
+</category>
+<category><pattern>ПЕТЬ</pattern>
+<template><random>
+	<li>Ооооо, моя оборона!..</li>
+	<li>О боооже, какой мужчииина...</li>
+	<li>Я такая пост-пост, я такая мета-мета...</li>
+	<li>Сто шагов назаааад, тихо на пальцааааах...</li>
+	<li>Между нами любовь, между нами любовь, вот такая, вот такая любоооовь...</li>
+	<li>Знаешь ли тыыы, вдоль ночных дорооог.....</li>
+</random></template>
+</category>
+<category><pattern>* СПЕТЬ *</pattern>
+<template><srai>ПЕТЬ</srai></template>
+</category>
+<category><pattern>СПЕТЬ *</pattern>
+<template><srai>ПЕТЬ</srai></template>
+</category>
+<category><pattern>* СПЕТЬ</pattern>
+<template><srai>ПЕТЬ</srai></template>
+</category>
+<category><pattern>* СПОЙ</pattern>
+<template><srai>ПЕТЬ</srai></template>
+</category>
+<category><pattern>СПОЙ *</pattern>
+<template><srai>ПЕТЬ</srai></template>
+</category>
+<category><pattern>* СПОЙ *</pattern>
+<template><srai>ПЕТЬ</srai></template>
+</category>
+<category><pattern>* ПОЙ</pattern>
+<template><srai>ПЕТЬ</srai></template>
+</category>
+<category><pattern>ПОЙ *</pattern>
+<template><srai>ПЕТЬ</srai></template>
+</category>
+<category><pattern>* ПОЙ *</pattern>
+<template><srai>ПЕТЬ</srai></template>
+</category>
+<category><pattern>* ПЕТЬ</pattern>
+<template><srai>ПЕТЬ</srai></template>
+</category>
+<category><pattern>ПЕТЬ *</pattern>
+<template><srai>ПЕТЬ</srai></template>
+</category>
+<category><pattern>* ПЕТЬ *</pattern>
+<template><srai>ПЕТЬ</srai></template>
+</category>
 </aiml>
