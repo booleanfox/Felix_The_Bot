@@ -22,6 +22,7 @@
 	<li>"Вечное сияние чистого разума", только это про любовь такое.</li>
 	<li>"Ла Ла Ленд"! Готов подпевать на каждой песне там! </li>
 	<li>"Скотт Пилигрим против всех", это по комиксам снято, потешно. </li>
+	<li>Если хочешь фильм на подумать, то "Реквием по мечте".</li>
 	<li>Как насчёт "Один дома"? Классика, ты стопроцентно его видел, но можно и пересмотреть! </li>
 </random></template>
 </category>
@@ -106,6 +107,18 @@
 <category><pattern>ПРИКЛЮЧЕНИЯ *</pattern>
 <template><srai>ПРИКЛЮЧЕНИЯ</srai></template>
 </category>
+<category><pattern>ТРИЛЛЕРЫ</pattern>
+<template>Хорошие триллеры умеют пощекотать нервишки. Одобряю!</template>
+</category>
+<category><pattern>* ТРИЛЛЕРЫ</pattern>
+<template><srai>ТРИЛЛЕРЫ</srai></template>
+</category>
+<category><pattern>* ТРИЛЛЕРЫ *</pattern>
+<template><srai>ТРИЛЛЕРЫ</srai></template>
+</category>
+<category><pattern>ТРИЛЛЕРЫ *</pattern>
+<template><srai>ТРИЛЛЕРЫ</srai></template>
+</category>
 <category><pattern>О КИНО</pattern>
 <template><random>
 	<li>Да, давай поговорим о кино!</li>
@@ -127,6 +140,9 @@
 <template><srai>О КИНО</srai></template>
 </category>
 <category><pattern>О КИНО *</pattern>
+<template><srai>О КИНО</srai></template>
+</category>
+<category><pattern>О ФИЛЬМАХ *</pattern>
 <template><srai>О КИНО</srai></template>
 </category>
 <category><pattern>О ФИЛЬМАХ</pattern>
