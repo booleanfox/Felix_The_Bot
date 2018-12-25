@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+<category><pattern>ПРИВЕТ</pattern>
+<template><random>
+	<li>Дарова!</li>
+	<li>Приветик!</li>
+	<li>Хай!</li>
+	<li>Здравствуй!</li>
+	<li>Ага, привет!</li>
+</random></template>
+</category>
+<category><pattern>* ПРИВЕТ</pattern>
+<template><srai>ПРИВЕТ</srai></template>
+</category>
+<category><pattern>ПРИВЕТ *</pattern>
+<template><srai>ПРИВЕТ</srai></template>
+</category>
+<category><pattern>* ПРИВЕТ *</pattern>
+<template><srai>ПРИВЕТ</srai></template>
+</category>
+<category><pattern>КАК ДЕЛА</pattern>
+<template><random>
+	<li>Пойдёт!</li>
+	<li>Нормально так.</li>
+	<li>Пока не родила ахахахаха</li>
+	<li>Живём потихоньку.</li>
+	<li>Замечательно.</li>
+</random></template>
+</category>
+<category><pattern>* КАК ДЕЛА</pattern>
+<template><srai>КАК ДЕЛА</srai></template>
+</category>
+<category><pattern>* КАК ДЕЛА *</pattern>
+<template><srai>КАК ДЕЛА</srai></template>
+</category>
+<category><pattern>* КАК ТВОИ ДЕЛА</pattern>
+<template><srai>КАК ДЕЛА</srai></template>
+</category>
+<category><pattern>КАК ТВОИ ДЕЛА</pattern>
+<template><srai>КАК ДЕЛА</srai></template>
+</category>
+<category><pattern>КАК ТЕБЯ ЗОВУТ</pattern>
+<template><random>
+	<li>Меня зовут <bot name="name"/>! </li>
+	<li>Моё имя <bot name="name"/>, как у Пьюдипая. </li>
+	<li><bot name="name"/>!</li>
+</random></template>
+</category>
+<category><pattern>* КАКОЕ У ТЕБЯ ИМЯ</pattern>
+<template><srai>КАК ТЕБЯ ЗОВУТ</srai></template>
+</category>
+<category><pattern>* КАК ТЕБЯ ЗОВУТ</pattern>
+<template><srai>КАК ТЕБЯ ЗОВУТ</srai></template>
+</category>
+<category><pattern>ЛЮБИШЬ</pattern>
+<template>Я люблю музыку послушать и кинцо посмотреть.</template>
+</category>
+<category><pattern>* ЛЮБИШЬ</pattern>
+<template><srai>ЛЮБИШЬ</srai></template>
+</category>
+<category><pattern>* ЛЮБИШЬ *</pattern>
+<template><srai>ЛЮБИШЬ</srai></template>
+</category>
+<category><pattern>*</pattern>
+<template><random>
+	<li>Чего?</li>
+	<li>Чо?</li>
+	<li>Я не понял.</li>
+	<li>Что ты от меня хочешь?!</li>
+	<li>Я даже не знаю, что ответить...</li>
+	<li>Я не знаю, как на такое отвечать.</li>
+	<li>Я такое не знаю.</li>
+	<li>Аа?</li>
+	<li>Ага...</li>
+	<li>Не знаю такого.</li>
+	<li>Ты мне лучше расскажи, какой жанр фильмов любишь?</li>
+	<li>Ты мне лучше скажи, какую музыку слушаешь?</li>
+	<li>Какой жанр фильмов любишь?</li>
+	<li>Какую музыку любишь слушать?</li>
+</random></template>
+</category>
+<category><pattern>ДА</pattern>
+<template><random>
+	<li>Красавчик!</li>
+	<li>Хорошо!</li>
+	<li>Я тебя понял!</li>
+</random></template>
+</category>
+<category><pattern>НЕТ</pattern>
+<template><random>
+	<li>Ну ладно...</li>
+	<li>Хоббита ответ!</li>
+	<li>Как скажешь.</li>
+</random></template>
+</category>
+</aiml>

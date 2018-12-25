@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<category><pattern>* ТЕМНИКОВА</pattern>
+<template>Темникова крутая!</template>
+</category>
+<category><pattern>* ТЫ ЛЮБИШЬ МУЗЫКУ</pattern>
+<template>Как можно не любить музыку?</template>
+</category>
+<category><pattern>* ЛЮБИМАЯ ГРУППА</pattern>
+<template>О, моя любимая группа это <bot name="favoriteband"/>.</template>
+</category>
+<category><pattern>* ЛЮБИМАЯ ПЕСНЯ</pattern>
+<template>"Лобстер-пицца" группы Кровосток, конечно же!</template>
+</category>
+<category><pattern>ПЕТЬ</pattern>
+<template><random>
+	<li>Я помню бееелые обои, чееерная посуда...</li>
+	<li>А на море беееелый песоооок...</li>
+	<li>О боооже, какой мужчииина...</li>
+	<li>Я такая пост-пост, я такая мета-мета...</li>
+	<li>Сто шагов назаааад, тихо на пальцааааах...</li>
+	<li>Между нами любовь, между нами любовь, вот такая, вот такая любоооовь...</li>
+</random></template>
+</category>
+<category><pattern>* СПЕТЬ *</pattern>
+<template><srai>ПЕТЬ</srai></template>
+</category>
+<category><pattern>СПЕТЬ *</pattern>
+<template><srai>ПЕТЬ</srai></template>
+</category>
+<category><pattern>* СПЕТЬ</pattern>
+<template><srai>ПЕТЬ</srai></template>
+</category>
+<category><pattern>* СПОЙ</pattern>
+<template><srai>ПЕТЬ</srai></template>
+</category>
+<category><pattern>СПОЙ *</pattern>
+<template><srai>ПЕТЬ</srai></template>
+</category>
+<category><pattern>* СПОЙ *</pattern>
+<template><srai>ПЕТЬ</srai></template>
+</category>
+<category><pattern>* ПЕТЬ</pattern>
+<template><srai>ПЕТЬ</srai></template>
+</category>
+<category><pattern>ПЕТЬ *</pattern>
+<template><srai>ПЕТЬ</srai></template>
+</category>
+<category><pattern>* ПЕТЬ *</pattern>
+<template><srai>ПЕТЬ</srai></template>
+</category>
+<category><pattern>ЧАСТУШКИ</pattern>
+<template><random>
+	<li>Поленился утром Вова
+Причесаться гребешком,
+Подошла к нему корова,
+Причесала языком!</li>
+	<li>Трень — брень — дребедень!
+Выступал бы целый день!
+Мне учиться неохота,
+А частушки петь не лень!</li>
+	<li>В магазине продавщица
+Назвала меня «свиньёй».
+Бабки думали свинина,
+Стали в очередь за мной.</li>
+	<li>Три недели не купался,
+И поймал не пузе вошь.
+Она толстая, большая,
+Из винтовки не убьешь.</li>
+	<li>Ох, ты, яма, яма, яма…
+Я не знаю, кто копал.
+Шел милёнок на свиданье,
+Невзначай в неё упал.</li>
+</random></template>
+</category>
+<category><pattern>* ЧАСТУШКИ *</pattern>
+<template><srai>ЧАСТУШКИ</srai></template>
+</category>
+<category><pattern>* ЧАСТУШКИ</pattern>
+<template><srai>ЧАСТУШКИ</srai></template>
+</category>
+<category><pattern>* ЧАСТУШКУ</pattern>
+<template><srai>ЧАСТУШКИ</srai></template>
+</category>
+<category><pattern>* ЧАСТУШКУ *</pattern>
+<template><srai>ЧАСТУШКИ</srai></template>
+</category>
+<category><pattern>РОК</pattern>
+<template>Рооооооок, моё уважение!</template>
+</category>
+<category><pattern>* РОК</pattern>
+<template><srai>РОК</srai></template>
+</category>
+<category><pattern>* РОК *</pattern>
+<template><srai>РОК</srai></template>
+</category>
+<category><pattern>РОК *</pattern>
+<template><srai>РОК</srai></template>
+</category>
+<category><pattern>ПОПСА</pattern>
+<template>Ну норм, потанцевать под такое можно.</template>
+</category>
+<category><pattern>* ПОПСА</pattern>
+<template><srai>ПОПСА</srai></template>
+</category>
+<category><pattern>* ПОПСА *</pattern>
+<template><srai>ПОПСА</srai></template>
+</category>
+<category><pattern>ПОПСА *</pattern>
+<template><srai>ПОПСА</srai></template>
+</category>
+<category><pattern>РЭП</pattern>
+<template>А, есть норм ребята, которые читают рэп, есть.</template>
+</category>
+<category><pattern>* РЭП</pattern>
+<template><srai>РЭП</srai></template>
+</category>
+<category><pattern>* РЭП *</pattern>
+<template><srai>РЭП</srai></template>
+</category>
+<category><pattern>РЭП *</pattern>
+<template><srai>РЭП</srai></template>
+</category>
+</aiml>
