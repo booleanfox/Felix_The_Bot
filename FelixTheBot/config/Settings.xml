@@ -24,7 +24,7 @@
   <item name="birthplace" value="Швецтя"/>
   <item name="website" value="https://www.youtube.com/user/PewDiePie/"/>
   <item name="adminemail" value=""/>
-  <item name="islogging" value="false"/>
+  <item name="islogging" value="true"/>
   <item name="willcallhome" value="false"/>
   <item name="timeout" value="300"/>
   <item name="timeoutmessage" value="I am not smart enough to understand what the heck you just said, sorry"/>

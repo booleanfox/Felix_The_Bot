@@ -126,7 +126,11 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /y /d  /I  "$(ProjectDir)aiml" "$(TargetDir)aiml"
+    <PostBuildEvent>rmdir /s /q "$(TargetDir)aiml"
+rmdir /s /q "$(TargetDir)aiml"
+rmdir /s /q "$(TargetDir)logs"
+
+xcopy /y /d  /I  "$(ProjectDir)aiml" "$(TargetDir)aiml"
 xcopy /y /d   /I "$(ProjectDir)config" "$(TargetDir)config"
 xcopy /y /d   /f "$(ProjectDir)credentials.txt " "$(TargetDir)"</PostBuildEvent>
   </PropertyGroup>

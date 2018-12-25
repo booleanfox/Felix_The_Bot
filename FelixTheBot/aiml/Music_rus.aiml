@@ -9,6 +9,9 @@
 <category><pattern>* ЛЮБИМАЯ ГРУППА</pattern>
 <template>О, моя любимая группа это <bot name="favoriteband"/>.</template>
 </category>
+<category><pattern>* ЛЮБИМАЯ ПЕСНЯ</pattern>
+<template>"Лобстер-пицца" группы Кровосток, конечно же!</template>
+</category>
 <category><pattern>ПЕТЬ</pattern>
 <template><random>
 	<li>Я помню бееелые обои, чееерная посуда...</li>
@@ -81,5 +84,41 @@
 </category>
 <category><pattern>* ЧАСТУШКУ *</pattern>
 <template><srai>ЧАСТУШКИ</srai></template>
+</category>
+<category><pattern>РОК</pattern>
+<template>Рооооооок, моё уважение!</template>
+</category>
+<category><pattern>* РОК</pattern>
+<template><srai>РОК</srai></template>
+</category>
+<category><pattern>* РОК *</pattern>
+<template><srai>РОК</srai></template>
+</category>
+<category><pattern>РОК *</pattern>
+<template><srai>РОК</srai></template>
+</category>
+<category><pattern>ПОПСА</pattern>
+<template>Ну норм, потанцевать под такое можно.</template>
+</category>
+<category><pattern>* ПОПСА</pattern>
+<template><srai>ПОПСА</srai></template>
+</category>
+<category><pattern>* ПОПСА *</pattern>
+<template><srai>ПОПСА</srai></template>
+</category>
+<category><pattern>ПОПСА *</pattern>
+<template><srai>ПОПСА</srai></template>
+</category>
+<category><pattern>РЭП</pattern>
+<template>А, есть норм ребята, которые читают рэп, есть.</template>
+</category>
+<category><pattern>* РЭП</pattern>
+<template><srai>РЭП</srai></template>
+</category>
+<category><pattern>* РЭП *</pattern>
+<template><srai>РЭП</srai></template>
+</category>
+<category><pattern>РЭП *</pattern>
+<template><srai>РЭП</srai></template>
 </category>
 </aiml>

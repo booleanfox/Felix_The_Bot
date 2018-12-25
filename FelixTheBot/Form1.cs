@@ -136,7 +136,7 @@ namespace FelixTheBot
             brain.loadAIMLFromFiles();
             brain.isAcceptingUserInput = true;
             brain.TrustAIML = true;
-
+           
         }
 
          void InitBot()
@@ -212,66 +212,21 @@ namespace FelixTheBot
                     )
             {
                 User user = GetUser(message.From);
-                string text = message.Text;
-                
-                var res = brain.Chat(text, user.UserID);
-                string reply = res.RawOutput.Trim();
-                if (reply == "")
-                    return;
+                Request request = new Request(message.Text, user, brain);
+                Result result = brain.Chat(request);
+               
+
+                string reply = result.Output; ;
+
+                if (reply == null)
+                    throw new Exception("null output");                                
                 Botik.SendTextMessageAsync(message.Chat.Id, reply, replyToMessageId: message.MessageId);
                 AddText($"{Botik_identity.Username} to {message.From.Username}: {reply} \n");
             }
 
         }
 
-        async void bw_DoWork(object sender, DoWorkEventArgs e)
-        {
-
-            try
-            {
-                string settingsPath;
-                Bot botik_aiml = new Bot
-                {
-                    // botik_aiml.loadSettings(settingsPath);
-                    // User myUser = new User();
-                    isAcceptingUserInput = false
-                };
-                botik_aiml.loadAIMLFromFiles();
-                botik_aiml.isAcceptingUserInput = true;
-
-                // message indent
-                while (true)
-                {
-                    var updates = await Botik.GetUpdatesAsync(offset);
-
-                    foreach (var update in updates)
-                    {
-                        var message = update.Message;
-                        if (message.Type == Telegram.Bot.Types.Enums.MessageType.Text)
-                        {
-                            if (message.Text == "/saysomething")
-                            {
-                                await Botik.SendTextMessageAsync(message.Chat.Id, "hey hows it going bros!",
-                                       replyToMessageId: message.MessageId);
-                            }
-
-                            //Request r = new Request(message.Text, myUser, botik_aiml);
-                            //Result res = botik_aiml.Chat(r);
-
-                            //await Botik.SendTextMessageAsync(message.Chat.Id, res.Output);
-                        }
-                        offset = update.Id + 1;
-                    }
-
-                }
-
-            }
-            catch (Telegram.Bot.Exceptions.ApiRequestException ex)
-            {
-                Console.WriteLine(ex.Message); // if wrong token
-            }
-        }
-
+     
         void buttonStart_Click(object sender, EventArgs e)
         {
             if (Botik.IsReceiving)

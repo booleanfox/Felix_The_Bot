@@ -9,6 +9,15 @@
 	<li>Ага, привет!</li>
 </random></template>
 </category>
+<category><pattern>* ПРИВЕТ</pattern>
+<template><srai>ПРИВЕТ</srai></template>
+</category>
+<category><pattern>ПРИВЕТ *</pattern>
+<template><srai>ПРИВЕТ</srai></template>
+</category>
+<category><pattern>* ПРИВЕТ *</pattern>
+<template><srai>ПРИВЕТ</srai></template>
+</category>
 <category><pattern>КАК ДЕЛА</pattern>
 <template><random>
 	<li>Пойдёт!</li>
@@ -63,6 +72,25 @@
 	<li>Я такое не знаю.</li>
 	<li>Аа?</li>
 	<li>Ага...</li>
+	<li>Не знаю такого.</li>
+	<li>Ты мне лучше расскажи, какой жанр фильмов любишь?</li>
+	<li>Ты мне лучше скажи, какую музыку слушаешь?</li>
+	<li>Какой жанр фильмов любишь?</li>
+	<li>Какую музыку любишь слушать?</li>
+</random></template>
+</category>
+<category><pattern>ДА</pattern>
+<template><random>
+	<li>Красавчик!</li>
+	<li>Хорошо!</li>
+	<li>Я тебя понял!</li>
+</random></template>
+</category>
+<category><pattern>НЕТ</pattern>
+<template><random>
+	<li>Ну ладно...</li>
+	<li>Хоббита ответ!</li>
+	<li>Как скажешь.</li>
 </random></template>
 </category>
 </aiml>

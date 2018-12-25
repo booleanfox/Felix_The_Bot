@@ -32,6 +32,63 @@
 <template><srai>ПОСОВЕТУЙ ФИЛЬМ</srai></template>
 </category>
 <category><pattern>УЖАСЫ</pattern>
-<template>Оооо, обожаю фильмы ужасов!</template>
+<template>Оооо, просто обожаю фильмы ужасов!</template>
+</category>
+<category><pattern>* УЖАСЫ</pattern>
+<template><srai>УЖАСЫ</srai></template>
+</category>
+<category><pattern>* УЖАСЫ *</pattern>
+<template><srai>УЖАСЫ</srai></template>
+</category>
+<category><pattern>УЖАСЫ *</pattern>
+<template><srai>УЖАСЫ</srai></template>
+</category>
+<category><pattern>КОМЕДИИ</pattern>
+<template>Поржать я тоже всегда за!</template>
+</category>
+<category><pattern>* КОМЕДИИ</pattern>
+<template><srai>КОМЕДИИ</srai></template>
+</category>
+<category><pattern>* КОМЕДИИ *</pattern>
+<template><srai>КОМЕДИИ</srai></template>
+</category>
+<category><pattern>КОМЕДИИ *</pattern>
+<template><srai>КОМЕДИИ</srai></template>
+</category>
+<category><pattern>БОЕВИКИ</pattern>
+<template>Погони, драки, пиу-пиу! Мне тоже нравится!</template>
+</category>
+<category><pattern>* БОЕВИКИ</pattern>
+<template><srai>БОЕВИКИ</srai></template>
+</category>
+<category><pattern>* БОЕВИКИ *</pattern>
+<template><srai>БОЕВИКИ</srai></template>
+</category>
+<category><pattern>БОЕВИКИ *</pattern>
+<template><srai>БОЕВИКИ</srai></template>
+</category>
+<category><pattern>ДРАМЫ</pattern>
+<template>Про любовь, что ли? Тебе в жизни драмы мало?</template>
+</category>
+<category><pattern>* ДРАМЫ</pattern>
+<template><srai>ДРАМЫ</srai></template>
+</category>
+<category><pattern>* ДРАМЫ *</pattern>
+<template><srai>ДРАМЫ</srai></template>
+</category>
+<category><pattern>ДРАМЫ *</pattern>
+<template><srai>ДРАМЫ</srai></template>
+</category>
+<category><pattern>ПРИКЛЮЧЕНИЯ</pattern>
+<template>Я тоже их люблю! Будь я человеком, пошёл бы искать приключений на свою голову!</template>
+</category>
+<category><pattern>* ПРИКЛЮЧЕНИЯ</pattern>
+<template><srai>ПРИКЛЮЧЕНИЯ</srai></template>
+</category>
+<category><pattern>* ПРИКЛЮЧЕНИЯ *</pattern>
+<template><srai>ПРИКЛЮЧЕНИЯ</srai></template>
+</category>
+<category><pattern>ПРИКЛЮЧЕНИЯ *</pattern>
+<template><srai>ПРИКЛЮЧЕНИЯ</srai></template>
 </category>
 </aiml>
