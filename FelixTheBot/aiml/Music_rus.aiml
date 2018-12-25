@@ -121,4 +121,76 @@
 <category><pattern>РЭП *</pattern>
 <template><srai>РЭП</srai></template>
 </category>
+<category><pattern>ДЖАЗ</pattern>
+<template>Ооо, ты тоже любишь джаз? Как же круто! </template>
+</category>
+<category><pattern>* ДЖАЗ</pattern>
+<template><srai>ДЖАЗ</srai></template>
+</category>
+<category><pattern>* ДЖАЗ *</pattern>
+<template><srai>ДЖАЗ</srai></template>
+</category>
+<category><pattern>ДЖАЗ *</pattern>
+<template><srai>ДЖАЗ</srai></template>
+</category>
+<category><pattern>ШАНСОН</pattern>
+<template>Интересный выбор, комментировать я его не буду.</template>
+</category>
+<category><pattern>* ШАНСОН</pattern>
+<template><srai>ШАНСОН</srai></template>
+</category>
+<category><pattern>* ШАНСОН *</pattern>
+<template><srai>ШАНСОН</srai></template>
+</category>
+<category><pattern>ШАНСОН *</pattern>
+<template><srai>ШАНСОН</srai></template>
+</category>
+<category><pattern>ПОСОВЕТУЙ МУЗЫКУ</pattern>
+<template><random>
+	<li>Послушай Леночку Темникову, я её так люблю!</li>
+	<li>Кровосток! Тебе определённо надо его послушать.</li>
+	<li>Хм... Оксимирона послушай, крутой мужик!</li>
+	<li>Я сейчас тебе вот что посоветую... Александр Пистолетов ;) </li>
+	<li>Монеточку! Обязательно послушай сейчас её последний альбом!</li>
+	<li>Сектор Газа, Кровосток, Ленинград! Вот такое у меня настроение сейчас, послушай их! </li>
+</random></template>
+</category>
+<category><pattern>ЧТО ПОСЛУШАТЬ</pattern>
+<template><srai>ПОСОВЕТУЙ МУЗЫКУ</srai></template>
+</category>
+<category><pattern>* ЧТО ПОСЛУШАТЬ</pattern>
+<template><srai>ПОСОВЕТУЙ МУЗЫКУ</srai></template>
+</category>
+<category><pattern>ЧТО ПОСЛУШАТЬ *</pattern>
+<template><srai>ПОСОВЕТУЙ МУЗЫКУ</srai></template>
+</category>
+<category><pattern>* ЧТО ПОСЛУШАТЬ *</pattern>
+<template><srai>ПОСОВЕТУЙ МУЗЫКУ</srai></template>
+</category>
+<category><pattern>* ПОСОВЕТУЙ МУЗЫКУ</pattern>
+<template><srai>ПОСОВЕТУЙ МУЗЫКУ</srai></template>
+</category>
+<category><pattern>ПОСОВЕТУЙ МУЗЫКУ *</pattern>
+<template><srai>ПОСОВЕТУЙ МУЗЫКУ</srai></template>
+</category>
+<category><pattern>* ПОСОВЕТУЙ МУЗЫКУ *</pattern>
+<template><srai>ПОСОВЕТУЙ МУЗЫКУ</srai></template>
+</category>
+<category><pattern>О МУЗЫКЕ</pattern>
+<template><random>
+	<li>Давай поговорим о музыке!</li>
+	<li>А какой твой любимый жанр музыки?</li>
+	<li>Если что, я даже могу тебе немножко спеть!</li>
+	<li>Обожаю музыку!</li>
+</random></template>
+</category>
+<category><pattern>* О МУЗЫКЕ</pattern>
+<template><srai>О МУЗЫКЕ</srai></template>
+</category>
+<category><pattern>О МУЗЫКЕ *</pattern>
+<template><srai>О МУЗЫКЕ</srai></template>
+</category>
+<category><pattern>* О МУЗЫКЕ *</pattern>
+<template><srai>О МУЗЫКЕ</srai></template>
+</category>
 </aiml>

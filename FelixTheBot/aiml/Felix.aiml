@@ -33,10 +33,16 @@
 <category><pattern>* КАК ДЕЛА *</pattern>
 <template><srai>КАК ДЕЛА</srai></template>
 </category>
+<category><pattern>КАК ДЕЛА *</pattern>
+<template><srai>КАК ДЕЛА</srai></template>
+</category>
 <category><pattern>* КАК ТВОИ ДЕЛА</pattern>
 <template><srai>КАК ДЕЛА</srai></template>
 </category>
 <category><pattern>КАК ТВОИ ДЕЛА</pattern>
+<template><srai>КАК ДЕЛА</srai></template>
+</category>
+<category><pattern>КАК ТВОИ ДЕЛА *</pattern>
 <template><srai>КАК ДЕЛА</srai></template>
 </category>
 <category><pattern>КАК ТЕБЯ ЗОВУТ</pattern>
@@ -46,25 +52,22 @@
 	<li><bot name="name"/>!</li>
 </random></template>
 </category>
-
-  <category>
-    <pattern> * КАКОЕ У ТЕБЯ ИМЯ </pattern>
-    <template>
-      <srai>КАК ТЕБЯ ЗОВУТ</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>  КАКОЕ У ТЕБЯ ИМЯ *</pattern>
-    <template>
-      <srai>КАК ТЕБЯ ЗОВУТ</srai>
-    </template>
-  </category>
-
-
-  <category><pattern> * КАКОЕ У ТЕБЯ ИМЯ *</pattern>
+<category><pattern>* КАК ТЕБЯ ЗОВУТ</pattern>
 <template><srai>КАК ТЕБЯ ЗОВУТ</srai></template>
 </category>
-<category><pattern>* КАК ТЕБЯ ЗОВУТ</pattern>
+<category><pattern>* КАК ТЕБЯ ЗОВУТ *</pattern>
+<template><srai>КАК ТЕБЯ ЗОВУТ</srai></template>
+</category>
+<category><pattern>КАК ТЕБЯ ЗОВУТ *</pattern>
+<template><srai>КАК ТЕБЯ ЗОВУТ</srai></template>
+</category>
+<category><pattern>* КАКОЕ У ТЕБЯ ИМЯ</pattern>
+<template><srai>КАК ТЕБЯ ЗОВУТ</srai></template>
+</category>
+<category><pattern>* КАКОЕ У ТЕБЯ ИМЯ *</pattern>
+<template><srai>КАК ТЕБЯ ЗОВУТ</srai></template>
+</category>
+<category><pattern>КАКОЕ У ТЕБЯ ИМЯ *</pattern>
 <template><srai>КАК ТЕБЯ ЗОВУТ</srai></template>
 </category>
 <category><pattern>ЛЮБИШЬ</pattern>
@@ -84,7 +87,7 @@
 	<li>Что ты от меня хочешь?!</li>
 	<li>Я даже не знаю, что ответить...</li>
 	<li>Я не знаю, как на такое отвечать.</li>
-	<li>Я такое не знаю.</li>
+	<li>Я такого не знаю.</li>
 	<li>Аа?</li>
 	<li>Ага...</li>
 	<li>Не знаю такого.</li>
@@ -92,13 +95,16 @@
 	<li>Ты мне лучше скажи, какую музыку слушаешь?</li>
 	<li>Какой жанр фильмов любишь?</li>
 	<li>Какую музыку любишь слушать?</li>
+	<li>Я тебе нравлюсь?</li>
+	<li>О чём ещё поговорим?</li>
 </random></template>
 </category>
 <category><pattern>ДА</pattern>
 <template><random>
 	<li>Красавчик!</li>
 	<li>Хорошо!</li>
-	<li>Я тебя понял!</li>
+	<li>Сковорода!</li>
+	<li>Я тебя понял.</li>
 </random></template>
 </category>
 <category><pattern>НЕТ</pattern>
@@ -106,6 +112,7 @@
 	<li>Ну ладно...</li>
 	<li>Хоббита ответ!</li>
 	<li>Как скажешь.</li>
+	<li>Окей...</li>
 </random></template>
 </category>
 </aiml>
