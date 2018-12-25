@@ -46,7 +46,22 @@
 	<li><bot name="name"/>!</li>
 </random></template>
 </category>
-<category><pattern>* КАКОЕ У ТЕБЯ ИМЯ</pattern>
+
+  <category>
+    <pattern> * КАКОЕ У ТЕБЯ ИМЯ </pattern>
+    <template>
+      <srai>КАК ТЕБЯ ЗОВУТ</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>  КАКОЕ У ТЕБЯ ИМЯ *</pattern>
+    <template>
+      <srai>КАК ТЕБЯ ЗОВУТ</srai>
+    </template>
+  </category>
+
+
+  <category><pattern> * КАКОЕ У ТЕБЯ ИМЯ *</pattern>
 <template><srai>КАК ТЕБЯ ЗОВУТ</srai></template>
 </category>
 <category><pattern>* КАК ТЕБЯ ЗОВУТ</pattern>

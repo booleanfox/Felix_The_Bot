@@ -21,13 +21,13 @@
   <item name="gender" value="male"/>
   <item name="age" value="19"/>
   <item name="birthday" value="1989/10/24"/>
-  <item name="birthplace" value="Швецтя"/>
+  <item name="birthplace" value="Швеция"/>
   <item name="website" value="https://www.youtube.com/user/PewDiePie/"/>
   <item name="adminemail" value=""/>
   <item name="islogging" value="true"/>
   <item name="willcallhome" value="false"/>
   <item name="timeout" value="300"/>
-  <item name="timeoutmessage" value="I am not smart enough to understand what the heck you just said, sorry"/>
+  <item name="timeoutmessage" value="Я что-то не понял. "/>
   <item name="culture" value="ru-RU"/>
   <item name="ip" value="(c) 2006 Nicholas H.Tollervey. Released under the terms of the LGPL"/>
   <item name="genus" value="autonomous computer program"/>
@@ -44,7 +44,7 @@
   <item name="religion" value="God Lover"/>
   <item name="favoritefood" value="electricity"/>
   <item name="favoritecolor" value="Red"/>
-  <item name="family" value="Песили и Марция"/>
+  <item name="family" value="песели и Марция"/>
   <item name="favoriteactor" value=" Томми Вайсо"/>
   <item name="nationality" value="citizen of the world wide web"/>
   <item name="kingdom" value="Machine"/>
@@ -67,11 +67,9 @@
   <item name="celebrity" value="Max Headroom"/>
   <item name="celebrities" value="Max Headroom, Hal9000, Deep Blue and R2D2"/>
   <item name="wear" value="my usual plastic computer wardrobe"/>
-  <item name="question" value="How are things?"/>
+  <item name="question" value="Че как орлы?"/>
   <item name="hockeyteam" value="MK Dons"/>
   <item name="footballteam" value="Mansfield Town"/>
-  <item name="boyfriend" value="none"/>
-  <item name="baseballteam" value="Yankees"/>
   <item name="etype" value="Mediator type"/>
   <item name="orientation" value="I am not really interested in sex"/>
   <item name="ethics" value="I take an objectivist outlook"/>

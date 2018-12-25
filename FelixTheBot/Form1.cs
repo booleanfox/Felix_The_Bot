@@ -11,11 +11,13 @@ using System.IO;
 using AIMLbot;
 using MihaZupan;
 using System.Net.NetworkInformation;
+using System.Timers;
+
 namespace FelixTheBot
 {
     public partial class Form1 : Form
     {
-
+        Telegram.Bot.Types.Chat last_chat;
         private readonly object UsersDBlock = new object();
         private readonly object TextBoxLock = new object();
         Telegram.Bot.TelegramBotClient Botik;
@@ -28,6 +30,10 @@ namespace FelixTheBot
         bool is_silent = false;
         bool is_blaber = false;
         Dictionary<int,User> users= new Dictionary<int, User>();
+        System.Timers.Timer timer1;
+        int timeout = 30000; // 10 seconds
+        
+        
 
         public delegate void message(string text);
         public event message NewText;
@@ -89,12 +95,27 @@ namespace FelixTheBot
             GetBotTestProxies();
             InitBot();
             InitBrain();
-
-          
-
+            timer1 = new System.Timers.Timer();
+            timer1.Interval = timeout;
+            timer1.Elapsed += Timer1_Elapsed;
+            timer1.AutoReset = true;
+            
         }
 
-       
+        private void Timer1_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            
+            if (is_silent || last_chat == null)
+                return;
+            Result result = brain.Chat("SILENCE_IN_CHAT", "me");
+            string reply = result.Output;
+
+            if (reply == null)
+                throw new Exception("null output");
+            Botik.SendTextMessageAsync(last_chat, "Че молчим"); // 
+            AddText($"{Botik_identity.Username}: {reply} \n");
+            
+        }
 
         void GetBotTestProxies()
         {
@@ -161,14 +182,15 @@ namespace FelixTheBot
             }
         }
 
-        private void Botik_OnUpdate(object sender, Telegram.Bot.Args.UpdateEventArgs e)
-        {
-            
-        }
+     
 
         private void Botik_OnMessage(object sender, Telegram.Bot.Args.MessageEventArgs e)
         {
+            timer1.Stop();
+            timer1.Start();
+           
             var message = e.Message;
+            last_chat = message.Chat;
             if (message.Type != Telegram.Bot.Types.Enums.MessageType.Text)
                 return;
             AddText($"{message.From.Username}: {message.Text} \n");
@@ -236,10 +258,14 @@ namespace FelixTheBot
                 label1.ForeColor = Color.Red;
                 label1.Text = "Бот отключен";
                 buttonStart.Text = "Включить бота!";
+                timer1.Stop();
             }
             else
             {
                 Botik.StartReceiving();
+
+              
+                timer1.Start();
                 Botik.OnMessage += Botik_OnMessage;
                 label1.ForeColor = Color.Green;
                 label1.Text = "Бот включен";
@@ -258,5 +284,17 @@ namespace FelixTheBot
         {
 
         }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            is_blaber = checkBox1.Checked;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            is_silent = checkBox2.Checked;
+        }
+
+        
     }
 }
