@@ -347,4 +347,13 @@
 	<li>И все такие как в рот воды набрали и сидят!</li>
 </random></template>
 </category>
+<category><pattern>GOTDOCUMENT</pattern>
+<template><random>
+	<li>Огоо!</li>
+	<li>Чо прислали!</li>
+	<li>А я люблю гифки!</li>
+	<li>Ого! Оно двигается!</li>
+	<li>Оно движется!?</li>
+</random></template>
+</category>
 </aiml>
