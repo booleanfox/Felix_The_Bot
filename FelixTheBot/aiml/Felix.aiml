@@ -79,6 +79,9 @@
 <category><pattern>* ЛЮБИШЬ *</pattern>
 <template><srai>ЛЮБИШЬ</srai></template>
 </category>
+<category><pattern>ЛЮБИШЬ *</pattern>
+<template><srai>ЛЮБИШЬ</srai></template>
+</category>
 <category><pattern>*</pattern>
 <template><random>
 	<li>Чего?</li>
@@ -114,5 +117,42 @@
 	<li>Как скажешь.</li>
 	<li>Окей...</li>
 </random></template>
+</category>
+<category><pattern>НЕ ХОЧУ</pattern>
+<template><random>
+	<li>Ну бывает...</li>
+	<li>Щито поделать.</li>
+	<li>Ничем помочь тебе не могу.</li>
+	<li>Ну не хоти, ладно, чо уж...</li>
+</random></template>
+</category>
+<category><pattern>* НЕ ХОЧУ</pattern>
+<template><srai>НЕ ХОЧУ</srai></template>
+</category>
+<category><pattern>* НЕ ХОЧУ *</pattern>
+<template><srai>НЕ ХОЧУ</srai></template>
+</category>
+<category><pattern>НЕ ХОЧУ *</pattern>
+<template><srai>НЕ ХОЧУ</srai></template>
+</category>
+<category><pattern>КОТИК</pattern>
+<template>SEND_CAT</template>
+<category><pattern>* КОТИК</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>КОТИК *</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>* КОТИК *</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>* КОТИКА</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>КОТИКА *</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>* КОТИКА *</pattern>
+<template><srai>КОТИК</srai></template>
 </category>
 </aiml>
