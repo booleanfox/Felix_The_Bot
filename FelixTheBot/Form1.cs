@@ -33,7 +33,7 @@ namespace FelixTheBot
         System.Timers.Timer timer1;
         int timeout = 120000; // 120 seconds
 
-        string cat_path = "C:\\Users\\je_day\\Desktop\\Felix_The_Bot\\FelixTheBot\\cat.png";
+        string cat_path = "C:\\Users\\je_day\\Desktop\\Felix_The_Bot\\FelixTheBot\\cat.jpg";
 
         public delegate void message(string text);
         public event message NewText;
@@ -124,12 +124,12 @@ namespace FelixTheBot
             
             if (is_silent || last_chat == null)
                 return;
-            Result result = brain.Chat("SILENCE_IN_CHAT", "me");
+            Result result = brain.Chat("SILENCEINCHAT", "me");
             string reply = result.Output;
 
             if (reply == null)
                 throw new Exception("null output");
-            Botik.SendTextMessageAsync(last_chat, "Че молчим"); // 
+            Botik.SendTextMessageAsync(last_chat, reply); // 
             AddText($"{Botik_identity.Username}: {reply} \n");
             
         }
@@ -247,7 +247,7 @@ namespace FelixTheBot
                 string toAIML = null;
                 bool Answer = message.Chat.Type == Telegram.Bot.Types.Enums.ChatType.Private ||
                               is_blaber ||
-                             message.Text.Contains("@" + Botik_identity.Username) ||
+                             (message.Text != null && message.Text.Contains("@" + Botik_identity.Username)) ||
                              (message.ReplyToMessage != null && message.ReplyToMessage.From.Id == Botik_identity.Id);
 
                 switch (message.Type)
@@ -257,29 +257,30 @@ namespace FelixTheBot
                         toAIML = message.Text;
                         break;
                     case Telegram.Bot.Types.Enums.MessageType.Photo:
-                        toAIML = "GOT_PHOTO";
+                        toAIML = "GOTPHOTO";
                         break;
                     case Telegram.Bot.Types.Enums.MessageType.Audio:
-                        toAIML = "GOT_AUDIO";
+                        toAIML = "GOTAUDIO";
                         break;
                     case Telegram.Bot.Types.Enums.MessageType.Video:
                         break;
                     case Telegram.Bot.Types.Enums.MessageType.Voice:
-                        toAIML = "GOT_VOICE";
+                        toAIML = "GOTVOICE";
                         break;
                     case Telegram.Bot.Types.Enums.MessageType.Document:
+                        toAIML = "GOTDOCUMENT";
                         break;
                     case Telegram.Bot.Types.Enums.MessageType.Sticker:
-                        toAIML = "GOT_STICKER";
+                        toAIML = "GOTSTICKER";
                         break;
                     case Telegram.Bot.Types.Enums.MessageType.VideoNote:
                         break;
                     case Telegram.Bot.Types.Enums.MessageType.ChatMembersAdded:
-                        toAIML = "NEW_MEMBER " + string.Join(", ",message.NewChatMembers.Select(u => u.Username));
+                        toAIML = "NEWMEMBER " + string.Join(", ",message.NewChatMembers.Select(u => u.Username));
                         Answer = true;  
                         break;
                     case Telegram.Bot.Types.Enums.MessageType.ChatMemberLeft:
-                        toAIML = "MEMBER_LEFT " + message.LeftChatMember.Username;
+                        toAIML = "MEMBERLEFT" + message.LeftChatMember.Username;
                         Answer = true;
                         break;
                     case Telegram.Bot.Types.Enums.MessageType.MessagePinned:
@@ -314,13 +315,13 @@ namespace FelixTheBot
 
             switch (responce)
             {
-                case "SEND_CAT":
+                case "SEND_CAT.":
                     using (var stream = File.Open(cat_path, FileMode.Open))
                     {
                         var rep = Botik.SendPhotoAsync(message.Chat.Id, stream, "", replyToMessageId: replyid).Result;
                     }                  
                     break;
-                case "SEND_MEME":
+                case "SEND_MEME.":
                     if(memes.Length > 0 )
                     {
                         var ind = r.Next() % memes.Length;

@@ -26,7 +26,7 @@
   <item name="adminemail" value=""/>
   <item name="islogging" value="true"/>
   <item name="willcallhome" value="false"/>
-  <item name="timeout" value="300"/>
+  <item name="timeout" value="1000"/>
   <item name="timeoutmessage" value="Я что-то не понял. "/>
   <item name="culture" value="ru-RU"/>
   <item name="ip" value="(c) 2006 Nicholas H.Tollervey. Released under the terms of the LGPL"/>
