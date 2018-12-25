@@ -177,7 +177,7 @@
 <category><pattern>* МЕМЫ *</pattern>
 <template><srai>МЕМ</srai></template>
 </category>
-<category><pattern>GOT_PHOTO</pattern>
+<category><pattern>GOTPHOTO</pattern>
 <template><random>
 	<li>О, картинка!</li>
 	<li>А я тоже умею картинки слать, но только с котиком!</li>
@@ -186,7 +186,7 @@
 	<li>Кинь ещё картинку!</li>
 </random></template>
 </category>
-<category><pattern>GOT_AUDIO</pattern>
+<category><pattern>GOTAUDIO</pattern>
 <template><random>
 	<li>Аудиозапись прислал? Так можно было?! </li>
 	<li>Я без наушников! Надеюсь то, что ты прислал, можно включать в приличном обществе.</li>
@@ -195,7 +195,7 @@
 	<li>Ух, спасибо! Послушаю! </li>
 </random></template>
 </category>
-<category><pattern>GOT_STICKER</pattern>
+<category><pattern>GOTSTICKER</pattern>
 <template><random>
 	<li>Как же я люблю стикеры!</li>
 	<li>Надо больше стикеров богу стикеров!</li>
@@ -205,7 +205,7 @@
 	<li>Ох, люблю смотреть на стикеры!</li>
 </random></template>
 </category>
-<category><pattern>GOT_VOICE</pattern>
+<category><pattern>GOTVOICE</pattern>
 <template><random>
 	<li>Голосовое? Так сразу?</li>
 	<li>О, надо послушать, что ты мне сказать хочешь.</li>
@@ -214,7 +214,7 @@
 	<li>Мне же наушники доставать надо, чтобы послушать... А не, я ж бот!</li>
 </random></template>
 </category>
-<category><pattern>NEW_MEMBER *</pattern>
+<category><pattern>NEWMEMBER *</pattern>
 <template><random>
 	<li>Приветик!</li>
 	<li>Здарова, новый пацан или пацанесса!</li>
@@ -222,12 +222,21 @@
 	<li>Чатик приветствует тебя!</li>
 </random></template>
 </category>
-<category><pattern>MEMBER_LEFT *</pattern>
+<category><pattern>MEMBERLEFT *</pattern>
 <template><random>
 	<li>Ну почемууу?</li>
 	<li>Эээ, куда?</li>
 	<li>Ну вот...</li>
 	<li>Уходят от нас ребятки...</li>
+</random></template>
+</category>
+<category><pattern>SILENCEINCHAT</pattern>
+<template><random>
+	<li>А чего все замолчали?</li>
+	<li>И тишинаааа...</li>
+	<li>Че молчим?</li>
+	<li>*перекати-поле покатилось*</li>
+	<li>И все такие как в рот воды набрали и сидят!</li>
 </random></template>
 </category>
 </aiml>
