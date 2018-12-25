@@ -31,6 +31,7 @@
             this.buttonStart = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label1 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // buttonStart
@@ -61,11 +62,20 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Бот не работает";
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(12, 87);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(484, 456);
+            this.richTextBox1.TabIndex = 4;
+            this.richTextBox1.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(428, 129);
+            this.ClientSize = new System.Drawing.Size(508, 555);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonStart);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -81,6 +91,7 @@
         private System.Windows.Forms.Button buttonStart;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 
