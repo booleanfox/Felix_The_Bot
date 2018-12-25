@@ -137,6 +137,7 @@
 </category>
 <category><pattern>КОТИК</pattern>
 <template>SEND_CAT</template>
+</category>
 <category><pattern>* КОТИК</pattern>
 <template><srai>КОТИК</srai></template>
 </category>
@@ -154,5 +155,79 @@
 </category>
 <category><pattern>* КОТИКА *</pattern>
 <template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>МЕМ</pattern>
+<template>SEND_MEME</template>
+</category>
+<category><pattern>* МЕМ</pattern>
+<template><srai>МЕМ</srai></template>
+</category>
+<category><pattern>МЕМ *</pattern>
+<template><srai>МЕМ</srai></template>
+</category>
+<category><pattern>* МЕМ *</pattern>
+<template><srai>МЕМ</srai></template>
+</category>
+<category><pattern>* МЕМЫ</pattern>
+<template><srai>МЕМ</srai></template>
+</category>
+<category><pattern>МЕМЫ *</pattern>
+<template><srai>МЕМ</srai></template>
+</category>
+<category><pattern>* МЕМЫ *</pattern>
+<template><srai>МЕМ</srai></template>
+</category>
+<category><pattern>GOT_PHOTO</pattern>
+<template><random>
+	<li>О, картинка!</li>
+	<li>А я тоже умею картинки слать, но только с котиком!</li>
+	<li>Картиииночка!</li>
+	<li>А у тебя ещё есть картинки?</li>
+	<li>Кинь ещё картинку!</li>
+</random></template>
+</category>
+<category><pattern>GOT_AUDIO</pattern>
+<template><random>
+	<li>Аудиозапись прислал? Так можно было?! </li>
+	<li>Я без наушников! Надеюсь то, что ты прислал, можно включать в приличном обществе.</li>
+	<li>Ооо, ща послушаю!</li>
+	<li>Там музычка?</li>
+	<li>Ух, спасибо! Послушаю! </li>
+</random></template>
+</category>
+<category><pattern>GOT_STICKER</pattern>
+<template><random>
+	<li>Как же я люблю стикеры!</li>
+	<li>Надо больше стикеров богу стикеров!</li>
+	<li>Давай ещё!</li>
+	<li>А у тебя есть ещё стикеры? Кииинь.</li>
+	<li>Кайфовый стикер!</li>
+	<li>Ох, люблю смотреть на стикеры!</li>
+</random></template>
+</category>
+<category><pattern>GOT_VOICE</pattern>
+<template><random>
+	<li>Голосовое? Так сразу?</li>
+	<li>О, надо послушать, что ты мне сказать хочешь.</li>
+	<li>А писать не умеешь?</li>
+	<li>Эх, ну ладно, послушаю.</li>
+	<li>Мне же наушники доставать надо, чтобы послушать... А не, я ж бот!</li>
+</random></template>
+</category>
+<category><pattern>NEW_MEMBER *</pattern>
+<template><random>
+	<li>Приветик!</li>
+	<li>Здарова, новый пацан или пацанесса!</li>
+	<li>Дратути.</li>
+	<li>Чатик приветствует тебя!</li>
+</random></template>
+</category>
+<category><pattern>MEMBER_LEFT *</pattern>
+<template><random>
+	<li>Ну почемууу?</li>
+	<li>Эээ, куда?</li>
+	<li>Ну вот...</li>
+	<li>Уходят от нас ребятки...</li>
+</random></template>
 </category>
 </aiml>
