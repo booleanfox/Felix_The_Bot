@@ -156,6 +156,114 @@
 <category><pattern>* КОТИКА *</pattern>
 <template><srai>КОТИК</srai></template>
 </category>
+<category><pattern>* КОТИКАМ</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>КОТИКАМ *</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>* КОТИКАМ *</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>* КОТИКОВ</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>КОТИКОВ *</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>* КОТИКОВ *</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>* КОТИКУ</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>КОТИКУ *</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>* КОТИКУ *</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>* КОТ</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>КОТ *</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>* КОТ *</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>* КОТА</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>КОТА *</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>* КОТА *</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>* КОТУ</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>КОТУ *</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>* КОТУ *</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>* КОТЫ</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>КОТЫ *</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>* КОТЫ *</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>* КОШКА</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>КОШКА *</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>* КОШКА *</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>* КОШКЕ</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>КОШКЕ *</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>* КОШКЕ *</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>* КОШКИ</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>КОШКИ *</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>* КОШКИ *</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>* КОШКАМ</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>КОШКАМ *</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>* КОШКАМ *</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>* КОШКУ</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>КОШКУ *</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
+<category><pattern>* КОШКУ *</pattern>
+<template><srai>КОТИК</srai></template>
+</category>
 <category><pattern>МЕМ</pattern>
 <template>SEND_MEME</template>
 </category>
