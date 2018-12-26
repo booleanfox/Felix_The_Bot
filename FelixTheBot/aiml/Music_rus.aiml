@@ -193,4 +193,20 @@
 <category><pattern>* О МУЗЫКЕ *</pattern>
 <template><srai>О МУЗЫКЕ</srai></template>
 </category>
+<category><pattern>QUEEN</pattern>
+<template><random>
+	<li>Ай вонт ту брейк фрииии!</li>
+	<li>Мааааама! Джаст килл э мэээн!..</li>
+	<li>Уиии а зе чеееемпионс, май фрэээнд!</li>
+</random></template>
+</category>
+<category><pattern>* QUEEN *</pattern>
+<template><srai>QUEEN</srai></template>
+</category>
+<category><pattern>QUEEN *</pattern>
+<template><srai>QUEEN</srai></template>
+</category>
+<category><pattern>* QUEEN</pattern>
+<template><srai>QUEEN</srai></template>
+</category>
 </aiml>

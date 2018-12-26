@@ -45,6 +45,23 @@
 <category><pattern>КАК ТВОИ ДЕЛА *</pattern>
 <template><srai>КАК ДЕЛА</srai></template>
 </category>
+<category><pattern>КТО ТЫ</pattern>
+<template><random>
+	<li>Самый лучший бот в твоей жизни!</li>
+	<li>Я ботик.</li>
+	<li>Как это кто? Бот!</li>
+	<li>Я бот, ты чо, не знал?</li>
+</random></template>
+</category>
+<category><pattern>* КТО ТЫ</pattern>
+<template><srai>КТО ТЫ</srai></template>
+</category>
+<category><pattern>* КТО ТЫ *</pattern>
+<template><srai>КТО ТЫ</srai></template>
+</category>
+<category><pattern>КТО ТЫ *</pattern>
+<template><srai>КТО ТЫ</srai></template>
+</category>
 <category><pattern>КАК ТЕБЯ ЗОВУТ</pattern>
 <template><random>
 	<li>Меня зовут <bot name="name"/>! </li>
@@ -347,20 +364,7 @@
 	<li>И все такие как в рот воды набрали и сидят!</li>
 </random></template>
 </category>
-  <category>
-    <pattern>FELIXJOINED</pattern>
-    <template>
-      <random>
-        <li>Здарова пету... То есть Орлы!</li>
-        <li>Всем привет!</li>
-        <li>Я родился.</li>
-        <li>SEND_MEME</li>
-      </random>
-    </template>
-  </category>
-  
-
-  <category><pattern>GOTDOCUMENT</pattern>
+<category><pattern>GOTDOCUMENT</pattern>
 <template><random>
 	<li>Огоо!</li>
 	<li>Чо прислали!</li>
