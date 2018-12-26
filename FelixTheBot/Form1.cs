@@ -276,7 +276,10 @@ namespace FelixTheBot
                     case Telegram.Bot.Types.Enums.MessageType.VideoNote:
                         break;
                     case Telegram.Bot.Types.Enums.MessageType.ChatMembersAdded:
-                        toAIML = "NEWMEMBER " + string.Join(",",message.NewChatMembers.Select(u => u.Username));
+                        if (message.NewChatMembers.Count((Telegram.Bot.Types.User u) => u.Id == Botik_identity.Id) > 0)
+                            toAIML = "FELIXJOINED";
+                        else
+                            toAIML = "NEWMEMBER " + string.Join(",",message.NewChatMembers.Select(u => u.Username));
                         Answer = true;  
                         break;
                     case Telegram.Bot.Types.Enums.MessageType.ChatMemberLeft:

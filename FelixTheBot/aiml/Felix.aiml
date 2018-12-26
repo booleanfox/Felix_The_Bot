@@ -347,7 +347,20 @@
 	<li>И все такие как в рот воды набрали и сидят!</li>
 </random></template>
 </category>
-<category><pattern>GOTDOCUMENT</pattern>
+  <category>
+    <pattern>FELIXJOINED</pattern>
+    <template>
+      <random>
+        <li>Здарова пету... То есть Орлы!</li>
+        <li>Всем привет!</li>
+        <li>Я родился.</li>
+        <li>SEND_MEME</li>
+      </random>
+    </template>
+  </category>
+  
+
+  <category><pattern>GOTDOCUMENT</pattern>
 <template><random>
 	<li>Огоо!</li>
 	<li>Чо прислали!</li>
