@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-<category><pattern>* ТЕМНИКОВА</pattern>
+<category><pattern>*ТЕМНИК*</pattern>
 <template>Темникова крутая!</template>
 </category>
 <category><pattern>* ТЫ ЛЮБИШЬ МУЗЫКУ</pattern>
@@ -22,10 +22,10 @@
 	<li>Между нами любовь, между нами любовь, вот такая, вот такая любоооовь...</li>
 </random></template>
 </category>
-<category><pattern>* СПЕТЬ *</pattern>
+<category><pattern>*ПОЙ*</pattern>
 <template><srai>ПЕТЬ</srai></template>
 </category>
-<category><pattern>СПЕТЬ *</pattern>
+<category><pattern>*СПЕ*</pattern>
 <template><srai>ПЕТЬ</srai></template>
 </category>
 <category><pattern>* СПЕТЬ</pattern>
@@ -34,6 +34,12 @@
 <category><pattern>* СПОЙ</pattern>
 <template><srai>ПЕТЬ</srai></template>
 </category>
+  <category>
+    <pattern>*СПО*</pattern>
+    <template>
+      <srai>ПЕТЬ</srai>
+    </template>
+  </category>
 <category><pattern>СПОЙ *</pattern>
 <template><srai>ПЕТЬ</srai></template>
 </category>
@@ -73,7 +79,7 @@
 Невзначай в неё упал.</li>
 </random></template>
 </category>
-<category><pattern>* ЧАСТУШКИ *</pattern>
+<category><pattern>* ЧАСТУШ*</pattern>
 <template><srai>ЧАСТУШКИ</srai></template>
 </category>
 <category><pattern>* ЧАСТУШКИ</pattern>
@@ -91,7 +97,7 @@
 <category><pattern>* РОК</pattern>
 <template><srai>РОК</srai></template>
 </category>
-<category><pattern>* РОК *</pattern>
+<category><pattern>* РОК*</pattern>
 <template><srai>РОК</srai></template>
 </category>
 <category><pattern>РОК *</pattern>
@@ -100,7 +106,7 @@
 <category><pattern>ПОПСА</pattern>
 <template>Ну норм, потанцевать под такое можно.</template>
 </category>
-<category><pattern>* ПОПСА</pattern>
+<category><pattern>*ПОП*</pattern>
 <template><srai>ПОПСА</srai></template>
 </category>
 <category><pattern>* ПОПСА *</pattern>
@@ -115,7 +121,7 @@
 <category><pattern>* РЭП</pattern>
 <template><srai>РЭП</srai></template>
 </category>
-<category><pattern>* РЭП *</pattern>
+<category><pattern>*РЭП*</pattern>
 <template><srai>РЭП</srai></template>
 </category>
 <category><pattern>РЭП *</pattern>
@@ -127,7 +133,7 @@
 <category><pattern>* ДЖАЗ</pattern>
 <template><srai>ДЖАЗ</srai></template>
 </category>
-<category><pattern>* ДЖАЗ *</pattern>
+<category><pattern>* ДЖАЗ*</pattern>
 <template><srai>ДЖАЗ</srai></template>
 </category>
 <category><pattern>ДЖАЗ *</pattern>
@@ -136,7 +142,7 @@
 <category><pattern>ШАНСОН</pattern>
 <template>Интересный выбор, комментировать я его не буду.</template>
 </category>
-<category><pattern>* ШАНСОН</pattern>
+<category><pattern>* ШАНСОН*</pattern>
 <template><srai>ШАНСОН</srai></template>
 </category>
 <category><pattern>* ШАНСОН *</pattern>
@@ -155,7 +161,7 @@
 	<li>Сектор Газа, Кровосток, Ленинград! Вот такое у меня настроение сейчас, послушай их! </li>
 </random></template>
 </category>
-<category><pattern>ЧТО ПОСЛУШАТЬ</pattern>
+<category><pattern>*ЧТО ПОСЛУШ*</pattern>
 <template><srai>ПОСОВЕТУЙ МУЗЫКУ</srai></template>
 </category>
 <category><pattern>* ЧТО ПОСЛУШАТЬ</pattern>
@@ -187,7 +193,7 @@
 <category><pattern>* О МУЗЫКЕ</pattern>
 <template><srai>О МУЗЫКЕ</srai></template>
 </category>
-<category><pattern>О МУЗЫКЕ *</pattern>
+<category><pattern>*МУЗЫК*</pattern>
 <template><srai>О МУЗЫКЕ</srai></template>
 </category>
 <category><pattern>* О МУЗЫКЕ *</pattern>
@@ -203,6 +209,12 @@
 <category><pattern>* QUEEN *</pattern>
 <template><srai>QUEEN</srai></template>
 </category>
+  <category>
+    <pattern>*КВИН*</pattern>
+    <template>
+      <srai>QUEEN</srai>
+    </template>
+  </category>
 <category><pattern>QUEEN *</pattern>
 <template><srai>QUEEN</srai></template>
 </category>

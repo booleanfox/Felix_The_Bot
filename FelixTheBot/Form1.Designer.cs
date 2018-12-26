@@ -40,10 +40,10 @@
             // 
             this.buttonStart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonStart.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonStart.Location = new System.Drawing.Point(124, 52);
-            this.buttonStart.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonStart.Location = new System.Drawing.Point(165, 64);
+            this.buttonStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonStart.Name = "buttonStart";
-            this.buttonStart.Size = new System.Drawing.Size(176, 27);
+            this.buttonStart.Size = new System.Drawing.Size(235, 33);
             this.buttonStart.TabIndex = 2;
             this.buttonStart.Text = "Запустить бота!";
             this.buttonStart.UseVisualStyleBackColor = true;
@@ -58,19 +58,21 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(124, 13);
+            this.label1.Location = new System.Drawing.Point(165, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 13);
+            this.label1.Size = new System.Drawing.Size(118, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Бот не работает";
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 87);
+            this.richTextBox1.Location = new System.Drawing.Point(16, 107);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.ShowSelectionMargin = true;
-            this.richTextBox1.Size = new System.Drawing.Size(484, 456);
+            this.richTextBox1.Size = new System.Drawing.Size(644, 560);
             this.richTextBox1.TabIndex = 4;
             this.richTextBox1.TabStop = false;
             this.richTextBox1.Text = "";
@@ -78,9 +80,10 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(324, 13);
+            this.checkBox1.Location = new System.Drawing.Point(432, 16);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(56, 17);
+            this.checkBox1.Size = new System.Drawing.Size(71, 21);
             this.checkBox1.TabIndex = 7;
             this.checkBox1.Text = "Blaber";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -89,9 +92,12 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(324, 52);
+            this.checkBox2.Checked = true;
+            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox2.Location = new System.Drawing.Point(432, 64);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(61, 17);
+            this.checkBox2.Size = new System.Drawing.Size(76, 21);
             this.checkBox2.TabIndex = 8;
             this.checkBox2.Text = "Silence";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -99,15 +105,15 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 555);
+            this.ClientSize = new System.Drawing.Size(677, 683);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonStart);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Felix_The_Bot";
             this.Load += new System.EventHandler(this.Form1_Load);

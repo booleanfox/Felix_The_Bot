@@ -3,7 +3,7 @@
 <category><pattern>* ЛЮБИМАЯ АКТРИСА</pattern>
 <template><bot name="favoriteactress"/>! Ты вообще видел, какая она классная?</template>
 </category>
-<category><pattern>* ЛЮБИМЫЙ ФИЛЬМ</pattern>
+<category><pattern>* ЛЮБИМЫЙ ФИЛЬМ*</pattern>
 <template><bot name="favoritemovie"/> норм такой.</template>
 </category>
 <category><pattern>В КИНО</pattern>
@@ -12,10 +12,10 @@
 <category><pattern>* В КИНО</pattern>
 <template><srai>В КИНО</srai></template>
 </category>
-<category><pattern>* В КИНО *</pattern>
+<category><pattern>*КИНО*</pattern>
 <template><srai>В КИНО</srai></template>
 </category>
-<category><pattern>ПОСОВЕТУЙ ФИЛЬМ</pattern>
+<category><pattern>*ПОСОВЕТ* ФИЛЬМ*</pattern>
 <template><random>
 	<li>"Пила" - милейший и добрейший фильм!</li>
 	<li>Мне очень нравится "Автостопом по галактике".</li>
@@ -32,7 +32,7 @@
 <category><pattern>* ПОСОВЕТУЙ ФИЛЬМ *</pattern>
 <template><srai>ПОСОВЕТУЙ ФИЛЬМ</srai></template>
 </category>
-<category><pattern>* ПОСОВЕТУЙ ФИЛЬМ</pattern>
+<category><pattern>*СОВЕТ* ФИЛЬМ*</pattern>
 <template><srai>ПОСОВЕТУЙ ФИЛЬМ</srai></template>
 </category>
 <category><pattern>ЧТО ПОСМОТРЕТЬ</pattern>
@@ -41,7 +41,7 @@
 <category><pattern>ЧТО ПОСМОТРЕТЬ *</pattern>
 <template><srai>ПОСОВЕТУЙ ФИЛЬМ</srai></template>
 </category>
-<category><pattern>* ЧТО ПОСМОТРЕТЬ *</pattern>
+<category><pattern>*СМОТРЕТ*</pattern>
 <template><srai>ПОСОВЕТУЙ ФИЛЬМ</srai></template>
 </category>
 <category><pattern>* ЧТО ПОСМОТРЕТЬ</pattern>
@@ -104,9 +104,15 @@
 <category><pattern>* ПРИКЛЮЧЕНИЯ *</pattern>
 <template><srai>ПРИКЛЮЧЕНИЯ</srai></template>
 </category>
-<category><pattern>ПРИКЛЮЧЕНИЯ *</pattern>
+<category><pattern>*ПРИКЛЮЧЕН*</pattern>
 <template><srai>ПРИКЛЮЧЕНИЯ</srai></template>
 </category>
+  <category>
+    <pattern>*СТРАШН*</pattern>
+    <template>
+      <srai>ТРИЛЛЕРЫ</srai>
+    </template>
+  </category>
 <category><pattern>ТРИЛЛЕРЫ</pattern>
 <template>Хорошие триллеры умеют пощекотать нервишки. Одобряю!</template>
 </category>
@@ -136,7 +142,7 @@
 <category><pattern>* О КИНО *</pattern>
 <template><srai>О КИНО</srai></template>
 </category>
-<category><pattern>* О ФИЛЬМАХ *</pattern>
+<category><pattern>*ФИЛЬМ*</pattern>
 <template><srai>О КИНО</srai></template>
 </category>
 <category><pattern>О КИНО *</pattern>

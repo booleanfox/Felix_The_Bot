@@ -27,13 +27,13 @@ namespace FelixTheBot
         Bot brain;
         Telegram.Bot.Types.User Botik_identity;
         int offset = 0;
-        bool is_silent = false;
+        bool is_silent = true;
         bool is_blaber = false;
         Dictionary<int,User> users= new Dictionary<int, User>();
         System.Timers.Timer timer1;
         int timeout = 120000; // 120 seconds
 
-        string cat_path = "C:\\Users\\je_day\\Desktop\\Felix_The_Bot\\FelixTheBot\\cat.jpg";
+        string cat_path = @"C:\Users\boole\Desktop\ФЕЛИКС\Felix_The_Bot\FelixTheBot\cat.jpg";
 
         public delegate void message(string text);
         public event message NewText;
@@ -236,7 +236,7 @@ namespace FelixTheBot
                 return;
             else if (command == $"REPORT @{Botik_identity.Username}" || command == "REPORT_ALL")
             {
-                string reply = $"{Botik_identity.Username}: Я {Botik_identity.Username}, ставьте лайк и подписывайтесь!";
+                string reply = $"Я Пьюдипай, ставьте лайк и подписывайтесь!";
                 Botik.SendTextMessageAsync(message.Chat.Id, reply, replyToMessageId: message.MessageId);
                 AddText(reply+"\n");
             }
@@ -283,7 +283,7 @@ namespace FelixTheBot
                         Answer = true;  
                         break;
                     case Telegram.Bot.Types.Enums.MessageType.ChatMemberLeft:
-                        toAIML = "MEMBERLEFT" + message.LeftChatMember.Username;
+                        toAIML = "MEMBERLEFT " + message.LeftChatMember.Username;
                         Answer = true;
                         break;
                     case Telegram.Bot.Types.Enums.MessageType.MessagePinned:
